@@ -1,0 +1,14 @@
+{
+  "name": "smartlock-app",
+  "version": "1.0.0",
+  "description": "Smart lock application using Firebase, HTML, CSS, JS, Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

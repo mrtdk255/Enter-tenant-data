@@ -1,0 +1,132 @@
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow-y: auto;
+  background: url('background.gif') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  color: black;
+}
+
+/* الحاويات العامة */
+.container, .login-wrapper, .tenant-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  padding: 35px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 380px;
+  margin: 25px 0;
+}
+
+/* شريط الأزرار العلوي */
+.top-buttons {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  gap: 10px;
+  z-index: 1001;
+}
+
+/* زر تبديل اللغة في أعلى اليمين */
+.language-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 12px 22px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.language-btn i {
+  margin-right: 8px;
+}
+
+.language-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+/* الأزرار العامة */
+.btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #00ffcc, #0044cc);
+  color: black;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #00ccaa, #0033aa);
+  transform: scale(1.05);
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.15);
+  color: black;
+  font-size: 16px;
+  text-align: center;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* إشعارات Toast */
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease, top 0.5s ease;
+  font-size: 16px;
+}
+
+.notification.show {
+  opacity: 1;
+  top: 50px;
+}
+
+.notification-icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
